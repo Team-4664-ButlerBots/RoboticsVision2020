@@ -660,8 +660,8 @@ public final class Main {
                   Rect r = Imgproc.boundingRect(pipeline.filterContoursOutput().get(0));
                   synchronized (imgLock) {
                     //defined as a percentage. If the resize node is changed then the 208 will have to be changed as well. same for height
-                      xCenter.setDouble((r.x + (r.width / 2)) / 208);
-                      yCenter.setDouble((r.y + (r.height / 2)) / 120);
+                      xCenter.setDouble((r.x + (r.width / 2)) / 208.0);
+                      yCenter.setDouble((r.y + (r.height / 2)) / 120.0);
                       RectSize.setDouble(Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)));
                       ContourState.setBoolean(pipeline.filterContoursOutput().isEmpty());
                   }
